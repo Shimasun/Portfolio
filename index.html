@@ -11,7 +11,7 @@
 
 <body>
   <div id="unity-container" class="unity-desktop">
-    <canvas id="unity-canvas" width=1280 height=720 tabindex="-1"></canvas>
+    <canvas id="unity-canvas" width=1280 height=720></canvas>
     <div id="unity-loading-bar">
       <div id="unity-logo"></div>
       <div id="unity-progress-bar-empty">
@@ -26,7 +26,6 @@
     </div>
   </div>
   <script>
-
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingBar = document.querySelector("#unity-loading-bar");
@@ -40,6 +39,7 @@
     // Modify or remove this function to customize the visually presented
     // way that non-critical warnings and error messages are presented to the
     // user.
+    //こんなところを　のぞくなんて！！！
     function unityShowBanner(msg, type) {
       function updateBannerVisibility() {
         warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -67,7 +67,7 @@
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Ryohei Shimamura",
       productName: "Chronicle S",
-      productVersion: "2.0.5",
+      productVersion: "2.0.6",
       showBanner: unityShowBanner,
     };
 
@@ -77,7 +77,6 @@
     // happening inside the engine, and you would instead like to size up
     // the canvas DOM size and WebGL render target sizes yourself.
     // config.matchWebGLToCanvasSize = false;
-    //こんなところを　みるなんて　けしからん！
 
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
       // Mobile device style: fill the whole browser client area with the game canvas:
@@ -93,7 +92,7 @@
       // performance, uncomment the following line:
       // config.devicePixelRatio = 1;
 
-
+      unityShowBanner('WebGL builds are not supported on mobile devices.');
     } else {
       // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
@@ -117,9 +116,7 @@
         alert(message);
       });
     };
-
     document.body.appendChild(script);
-
   </script>
 </body>
 
