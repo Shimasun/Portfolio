@@ -39,7 +39,6 @@
     // Modify or remove this function to customize the visually presented
     // way that non-critical warnings and error messages are presented to the
     // user.
-    // こんなところを　のぞくなんて　けしからん！
     function unityShowBanner(msg, type) {
       function updateBannerVisibility() {
         warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -67,16 +66,17 @@
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Ryohei Shimamura",
       productName: "Chronicle S",
-      productVersion: "2.0.11",
+      productVersion: "2.0.12",
       showBanner: unityShowBanner,
     };
 
-    // By default Unity keeps WebGL canvas render target size matched with
+    // By default, Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
     // Set this to false if you want to decouple this synchronization from
     // happening inside the engine, and you would instead like to size up
     // the canvas DOM size and WebGL render target sizes yourself.
     // config.matchWebGLToCanvasSize = false;
+    // こんなところを　のぞくなんて　けしからん！
 
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
       // Mobile device style: fill the whole browser client area with the game canvas:
